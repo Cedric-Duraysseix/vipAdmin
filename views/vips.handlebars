@@ -1,0 +1,57 @@
+<div class="menu_gauche">
+    <img src="/images/vips.png" alt="Vips" />
+    <ul>
+        <li class="traitHorizontal"><a href="/AjouterVip">Ajouter</a></li>
+        <li class="traitHorizontal"><a href="/ModifierVip">Modifier</a></li>
+        <li class="traitHorizontal"><a href="/SupprimerVip">Supprimer</a></li>
+    </ul>
+</div>
+
+<div class="formulaire">
+    <h1>Ajout VIPs</h1>
+    <form action="vip" method="post">
+        <div>
+            <label for="VIP_NOM">Nom :</label>
+            <input type="text" id="VIP_NOM" name="VIP_NOM">
+        </div>
+        <div>
+            <label for="VIP_PRENOM">Prenom :</label>
+            <input type="text" id="VIP_PRENOM" name="VIP_PRENOM">
+        </div>
+        <div>
+            <label for="VIP_SEXE">Sexe :</label>
+            <select name="VIP_SEXE" id="VIP_SEXE">
+                <option value="M">Masculin</option>
+                <option value="F">Feminin</option>
+            </select>
+        </div>
+        <div>
+            <label for="VIP_NAISSANCE">Date de naissance :</label>
+            <input type="date" id="VIP_NAISSANCE" name="VIP_NAISSANCE">
+        </div>
+        <div>
+            <label for="NATIONALITE_NUMERO">Nationnalité :</label>
+            <select name="NATIONALITE_NUMERO" id="NATIONALITE_NUMERO">
+                {{#if nationalite}}
+                    {{#each nationalite}}
+                        <option value="{{this.NATIONALITE_NUMERO}}">{{this.NATIONALITE_NOM}}</option>
+                    {{/each}}
+                {{/if}}
+            </select>
+        </div>
+        <div>
+            <label for="VIP_TEXTE">Commentaire :</label>
+            <textarea name="VIP_TEXTE" id="VIP_TEXTE" rows="5" cols="50"></textarea>
+        </div>
+        <div>
+            <label for="PHOTO_ADRESSE">Sélectionner l'image :</label>
+            <input type="file" id="PHOTO_ADRESSE" name="PHOTO_ADRESSE" value="Parcourir...">
+        </div>
+        <div>
+            <label for="PHOTO_SUJET">Sujet :</label>
+            <input type="text" id="PHOTO_SUJET" name="PHOTO_SUJET">
+        </div>
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Annuler">
+    </form>
+</div>

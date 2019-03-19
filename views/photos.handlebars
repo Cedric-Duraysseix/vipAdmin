@@ -1,0 +1,38 @@
+<div class="menu_gauche">
+    <img src="/images/photos.png" alt="photos" />
+    <ul>
+        <li class="traitHorizontal"><a href="/AjouterPhoto">Ajouter</a></li>
+        <li class="traitHorizontal"><a href="/ModifierPhoto">Modifier</a></li>
+        <li class="traitHorizontal"><a href="/SupprimerPhoto">Supprimer</a></li>
+    </ul>
+</div>
+
+<div class="formulaire">
+    <h1>Ajout d'une photo</h1>
+    <form action="photo" method="post">
+        <div>
+            <label for="VIP_NUMERO">Nom du vip :</label>
+            <select name="VIP_NUMERO" id="VIP_NUMERO">
+                {{#if nomPrenomVIP}}
+                    {{#each nomPrenomVIP}}
+                        <option value="{{this.VIP_NUMERO}}">{{this.VIP_NOM}} {{this.VIP_PRENOM}}</option>
+                    {{/each}}
+                {{/if}}
+            </select>
+        </div>
+        <div>
+            <label for="PHOTO_ADRESSE">Adresse de la photo :</label>
+            <input type="file" id="PHOTO_ADRESSE" name="PHOTO_ADRESSE" value="Parcourir...">
+        </div>
+        <div>
+            <label for="PHOTO_SUJET">Titre :</label>
+            <input type="text" id="PHOTO_SUJET" name="PHOTO_SUJET">
+        </div>
+        <div>
+            <label for="PHOTO_COMMENTAIRE">Un petit commentaire ?</label>
+            <textarea name="PHOTO_COMMENTAIRE" id="PHOTO_COMMENTAIRE" rows="3" cols="50"></textarea>
+        </div>
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Annuler">
+    </form>
+</div>

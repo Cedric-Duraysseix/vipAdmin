@@ -1,21 +1,28 @@
 {
-  "name": "VIPNodeJS 2019",
-  "description": "Un exemple Express.js application utilisant MVC Template",
-  "private": true,
-  "version": "0.1.4",
-  "dependencies": {
-    "async": "^2.6.1",
-    "body-parser": "^1.18.3",
-    "cookie-parser": ">=1.4",
-    "express": "^4.16.4",
-    "express-handlebars": "*",
-    "express-session": ">1.12",
-    "moment": "~2.11",
-    "mysql": "2.16.0",
-    "string": ">3.0",
-    "unidecode": "*"
+  "name": "vipadmin",
+  "version": "1.0.0",
+  "description": "<<<<<<< HEAD\r =======\r Structure de base pour l'application SixVoix de l'IUT en Node.js.<br />\r Le fichier vip.sql vous permettra de créer votre base vip.<br />\r Vous aurez aussi un jeu d'essai (réaliste mais pas exact).<br />\r <b>(Some small jokes ☺ )</b><br />",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "nodemon": "*"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/MiCha/vip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/MiCha/vip/issues"
+  },
+  "homepage": "https://gitlab.com/MiCha/vip#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.15.6",
+    "moment": "^2.24.0",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {}
 }

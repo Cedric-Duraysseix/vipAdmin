@@ -1,9 +1,9 @@
 let db = require('../configDb');
 
-module.exports.getNationalite = function(callback) {
+module.exports.getNomPrenomVip = function(callback) {
     db.getConnection(function(err, connexion) {
         if (!err) {
-            let sql = "SELECT NATIONALITE_NUMERO, NATIONALITE_NOM FROM nationalite ORDER BY NATIONALITE_NOM ASC   ;";
+            let sql = "SELECT VIP_NOM, VIP_PRENOM, VIP_NUMERO FROM vip ORDER BY VIP_NOM ASC  ;";
             // console.log(sql);
             connexion.query(sql, callback);
             connexion.release();

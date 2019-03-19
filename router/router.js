@@ -11,7 +11,10 @@ module.exports = function(app){
 
 // VIP
     app.get('/AjouterVip', VipController.Ajouter);
+    app.get('/ModifierVip', VipController.Modifier);
+    app.get('/SupprimerVip', VipController.Supprimer);
 
  // Photo
     app.get('/AjouterPhoto', PhotoController.Ajouter);
+    app.get('/SupprimerPhoto', PhotoController.Supprimer);
 };

@@ -11,6 +11,12 @@ module.exports.Ajouter = 	function(request, response){
             return;
         }
         response.nomPrenomVIP = result;
-        response.render('photos', response);
+        response.render('photosAjouter', response);
     });
+}
+
+module.exports.Supprimer = 	function(request, response){
+    response.title = 'Répertoire des stars';
+
+        response.render('photosSupprimer', response);
 }

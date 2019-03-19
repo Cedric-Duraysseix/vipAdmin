@@ -11,6 +11,16 @@ module.exports.Ajouter = 	function(request, response){
            return;
        }
        response.nationalite = result;
-       response.render('vips', response);
+       response.render('vipsAjouter', response);
    });
   } ;
+
+module.exports.Modifier = 	function(request, response){
+    response.title = 'Répertoire des stars';
+        response.render('vipsModifier', response);
+} ;
+
+module.exports.Supprimer = 	function(request, response){
+    response.title = 'Répertoire des stars';
+    response.render('vipsSupprimer', response);
+} ;
